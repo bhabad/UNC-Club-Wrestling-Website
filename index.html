@@ -12,7 +12,7 @@
   <!-- FIXED NAV -->
 <nav class="navbar">
   <a href="index.html" class="logo">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsCAXqExJwtO2vMx_G9ZUn19yvBLNCACzWig&s" alt="Site Logo">
+    <img src="media/logo.png" alt="Site Logo">
   </a>
 
   <input type="checkbox" id="menu-toggle" class="menu-toggle">
@@ -25,17 +25,27 @@
   <ul class="nav-links">
     <li><a href="#">Home</a></li>
     <li><a href="#">About</a></li>
-    <li><a href="#">Location</a></li>
     <li><a href="#">Contact</a></li>
   </ul>
 </nav>
 
   <!-- SCROLLABLE GRID SECTION -->
 <section class="grid-section">
-  <!-- Row 1: Centered image -->
-  <div class="hero-image">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDJ6mbB0iCbAuM_JBc9yNbbaLqaujgxOTRYw&s" alt="Wrestling">
+  <!-- Landing Statement -->
+  <div class="hero-statement">
+    <h1>Welcome to Tar Heel Wrestling</h1>
+    <p>We're an open wrestling club for all UNC students — beginners to experienced athletes. Our practices mix live wrestling, drilling, technique sessions, and conditioning, all in a supportive team environment.</p>
   </div>
+
+  <!-- Slideshow, source https://www.w3schools.com/w3css/w3css_slideshow.asp --> 
+<div class="hero-image">
+  <div class="w3-content w3-section" style="max-width:500px">
+    <img class="mySlides" src="media/practice-shot-1.jpeg" style="width:100%">
+    <img class="mySlides" src="media/practice-shot-2.jpeg" style="width:100%">
+    <img class="mySlides" src="media/practice-shot-3.jpeg" style="width:100%">
+  </div>
+</div>
+
 
   <!-- Rows 2–4 -->
   <div class="item">Description 1</div>
@@ -45,5 +55,7 @@
 
   <!-- FIXED FOOTER -->
   <footer class="footer">© UNC Wrestling Club 2025</footer>
+
+  <script src="script.js"></script>
 </body>
 

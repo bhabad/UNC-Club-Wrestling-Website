@@ -1,3 +1,12 @@
+:root {
+    --unc-blue: #13294B;
+    --unc-light-blue: #81aed7;
+    --nav-hover: #4B9CD3;
+    --white: #ffffff;
+    --black: #000000;
+    --item-bg: #eeeeee;
+} 
+
 
 
 * {
@@ -5,6 +14,8 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+
 /* Mobile First Grid For Home Page */
 body {
   height: 100vh;
@@ -12,6 +23,7 @@ body {
   grid-template-rows: auto 1fr auto;
   overflow: hidden; /* prevents body scroll */
   font-family: sans-serif;
+  background-color: var(--unc-blue);
 }
 
 
@@ -22,15 +34,15 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  height: 70px;
+  height: 80px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   padding: 0 20px;
-  background-color: #13294B;
-  color: white;
+  background-color: var(--unc-light-blue);
+  color: var(--white);
   z-index: 20;
 }
 
@@ -40,7 +52,7 @@ body {
 }
 
 .logo img {
-  height: 40px;          
+  height: 70px;          
   width: auto;           
   cursor: pointer;
 }
@@ -62,7 +74,7 @@ body {
 .hamburger .line {
   width: 100%;
   height: 3px;
-  background-color: white;
+  background-color: var(--white);
   border-radius: 2px;
   transition: 0.3s ease;
 }
@@ -75,17 +87,17 @@ body {
 }
 
 .nav-links a {
-  color: white;
+  color: var(--white);
   text-decoration: none;
   font-weight: 600;
 }
 
 .nav-links li:hover {
-  background-color: #4B9CD3 ;
+  background-color: var(--nav-hover);
 }
 
 .nav-links li:hover a {
-  color: black;
+  color: var(--black);
 }
 
 
@@ -103,7 +115,7 @@ body {
     top: 70px; /* exactly below navbar */
     left: 0;
     width: 100%;
-    background-color: #13294B;
+    background-color: var(--unc-blue);
     padding: 1rem 0;
     border-radius: 0 0 8px 8px;
     max-height: 60vh;
@@ -140,12 +152,34 @@ body {
   padding: 16px;
 
   margin-top: 70px;   /* Spacing for Content from the Fixed Nav and Footer */
-  margin-bottom: 60px; 
+  margin-bottom: 60px;
 
   display: grid;
-  grid-template-columns: 1fr; 
-  grid-template-rows: auto auto auto auto; 
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto auto;
   gap: 16px;
+}
+
+/* Hero Statement */
+.hero-statement {
+  background: linear-gradient(135deg, var(--unc-blue), var(--unc-light-blue));
+  color: var(--white);
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.hero-statement h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero-statement p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 /* Row 1: centered image */
@@ -157,21 +191,21 @@ body {
 
 .hero-image img {
   width: 100%;
-  max-width: 500px;   
+  max-width: 500px;
   border-radius: 12px;
   object-fit: cover;
 }
 
 /* Row items */
 .item {
-  background: #eee;
+  background: var(--item-bg);
   padding: 2rem;
   border-radius: 8px;
 }
 
 /* FIXED FOOTER */
-.footer { 
-  position: fixed; bottom: 0; left: 0; right: 0; height: 60px; background-color: #13294B; color: white; display: flex; align-items: center; justify-content: center; z-index: 20; } 
+.footer {
+  position: fixed; bottom: 0; left: 0; right: 0; height: 60px; background-color: var(--unc-light-blue); color: var(--white); display: flex; align-items: center; justify-content: center; z-index: 20; } 
 
 /* Desktop View of Grid Section (Content) */
 @media screen and (min-width: 768px) {
