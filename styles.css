@@ -51,7 +51,8 @@ body {
   padding: 0 20px;
   background: linear-gradient(to right, var(--unc-light-blue), var(--unc-blue));
   color: var(--white);
-  z-index: 20;
+  border-bottom: 2px solid var(--white);
+  z-index: 1; /* ensures navbar is above all the other stuff */
 }
 
 .logo {
@@ -70,6 +71,7 @@ body {
   display: none;
 }
 
+/* Used google and added this for accessibility for keyboard users to access hamburger menu */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -77,6 +79,11 @@ body {
   width: 30px;
   height: 20px;
   cursor: pointer;
+}
+
+.hamburger:focus {
+  outline: 2px solid var(--white);
+  outline-offset: 4px;
 }
 
 .hamburger .line {
@@ -100,11 +107,11 @@ body {
   font-weight: 600;
 }
 
-.nav-links li:hover {
+.nav-links li:hover, .nav-links li:focus {
   background-color: var(--nav-hover);
 }
 
-.nav-links li:hover a {
+.nav-links li:hover a, .nav-links li:focus a {
   color: var(--black);
 }
 
@@ -123,7 +130,7 @@ body {
     top: 70px; /* exactly below navbar */
     left: 0;
     width: 100%;
-    background: rgba(19, 41, 75, 0.95);
+    background: linear-gradient(to right, var(--unc-light-blue), var(--unc-blue));
     padding: 1rem 0;
     border-radius: 0 0 8px 8px;
     max-height: 60vh;
@@ -134,6 +141,9 @@ body {
   .nav-links li {
     text-align: center;
     padding: 10px 0;
+    margin: 0.5rem 1rem;
+    border: 2px solid var(--white);
+    border-radius: var(--small-box-radius);
   }
 
   /* Dropdown opens */
@@ -216,7 +226,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 3rem 0;
-  margin-top: 2rem;
+  margin-top: 0rem;
 }
 
 .btn-learn-more,.btn-join,.btn-groupme {
@@ -232,7 +242,14 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.btn-learn-more:hover,.btn-join:hover,.btn-groupme:hover {
+.btn-learn-more:hover,
+.btn-learn-more:focus,
+.btn-join:hover,
+.btn-join:focus,
+.btn-groupme:hover,
+.btn-groupme:focus,
+.btn-submit:hover,
+.btn-submit:focus {
   background-color: var(--nav-hover);
   color: var(--black);
   transform: translateY(-2px);
@@ -506,12 +523,6 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.btn-submit:hover {
-  background-color: var(--nav-hover);
-  color: var(--black);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
 
 /* Executive Board List */
 .board-list {
@@ -535,13 +546,6 @@ body {
   text-align: center;
 }
 
-
-.btn-groupme:hover {
-  background-color: var(--nav-hover);
-  color: var(--black);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
 
 /* Desktop styles for contact page */
 @media screen and (min-width: 768px) {

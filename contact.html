@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - UNC Wrestling Club</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="media/transperantlogo.png">
 </head>
 
 <body>
+  
   <!-- FIXED NAV -->
 <nav class="navbar">
   <a href="index.html" class="logo">
@@ -15,7 +17,7 @@
   </a>
 
   <input type="checkbox" id="menu-toggle" class="menu-toggle">
-  <label for="menu-toggle" class="hamburger">
+  <label for="menu-toggle" class="hamburger" tabindex="0" role="button" aria-label="Toggle navigation menu"> <!-- added tabindex for accessibility for keyboard users to access hamburger menu -->
     <span class="line"></span>
     <span class="line"></span>
     <span class="line"></span>
@@ -35,7 +37,7 @@
   <h1 class="contact-title">Contact Us</h1>
 
   <!-- Contact Form Card. Used formsubmit.co for form handling  -->
-  <div class="contact-card">
+  <div class="contact-card contact-form-card">
     <form class="contact-form" action="https://formsubmit.co/Pep@unc.edu" method="POST">
       <div class="form-group">
         <label for="email">Your Email</label>
@@ -52,7 +54,7 @@
   </div>
 
   <!-- Executive Board Card, used strong to get unc color bolded titles for names-->
-  <div class="contact-card">
+  <div class="contact-card executive-board-card">
     <h2>Executive Board</h2>
     <div class="board-list">
       <p><strong>President:</strong> Elliot Hollis - example@unc.edu</p>
