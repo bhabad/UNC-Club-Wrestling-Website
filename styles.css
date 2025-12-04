@@ -22,13 +22,16 @@
 
 
 /* Mobile First Grid For Home Page */
+html, body {
+    overscroll-behavior: none; /* Prevents the white space from appearing when over scrolling - spent so long trying to figure out how to fix this and this is only solution that worked, though the rubber band effect is gone */
+}
+
 body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   font-family: sans-serif;
-  background: linear-gradient(to bottom right, var(--unc-light-blue), var(--unc-blue));
-  background-attachment: fixed;
+  background: linear-gradient(to right, var(--unc-light-blue), var(--unc-blue));
 }
 
 
@@ -46,7 +49,7 @@ body {
   justify-content: space-between;
 
   padding: 0 20px;
-  background: transparent;
+  background: linear-gradient(to right, var(--unc-light-blue), var(--unc-blue));
   color: var(--white);
   z-index: 20;
 }
