@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - UNC Wrestling Club</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- FIXED NAV -->
+<nav class="navbar">
+  <a href="index.html" class="logo">
+    <img src="media/transperantlogo.png" alt="Site Logo">
+  </a>
+
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+  <label for="menu-toggle" class="hamburger">
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+  </label>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+  <!-- CONTACT CONTENT SECTION -->
+<section class="contact-section">
+
+  <!-- Page Title -->
+  <h1 class="contact-title">Contact Us</h1>
+
+  <!-- Contact Form Card. Used formsubmit.co for form handling  -->
+  <div class="contact-card">
+    <form class="contact-form" action="https://formsubmit.co/Pep@unc.edu" method="POST">
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required placeholder="your.email@unc.edu">
+      </div>
+
+      <div class="form-group">
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="6" required placeholder="Type your message here..."></textarea>
+      </div>
+
+      <button type="submit" class="btn-submit">Submit</button>
+    </form>
+  </div>
+
+  <!-- Executive Board Card, used strong to get unc color bolded titles for names-->
+  <div class="contact-card">
+    <h2>Executive Board</h2>
+    <div class="board-list">
+      <p><strong>President:</strong> Elliot Hollis - example@unc.edu</p>
+      <p><strong>Vice President:</strong> Cooper Wingate - example@unc.edu</p>
+      <p><strong>Secretary:</strong> Eli - example@unc.edu</p>
+      <p><strong>Fundraising Chair:</strong> Lalith Challari - example@unc.edu</p>
+      <p><strong>Treasurer:</strong> Russell Rockacy - example@unc.edu</p>
+      <p><strong>Social Media Chair:</strong> Samagra Bhattarai - example@unc.edu</p>
+    </div>
+  </div>
+
+  <!-- GroupMe Link Card -->
+  <div class="contact-card groupme-card">
+    <h3>Join our GroupMe:</h3>
+    <a href="https://groupme.com/join_group/95434331/1x9lSaiF" target="_blank" class="btn-groupme">Join GroupMe</a>
+  </div>
+
+</section>
+
+  <!-- FIXED FOOTER -->
+  <footer class="footer">© UNC Wrestling Club 2025</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
